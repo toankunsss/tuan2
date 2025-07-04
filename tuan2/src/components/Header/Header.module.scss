@@ -1,0 +1,142 @@
+@use '../../styles/_variables' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0 24px;
+  height: $header-height;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 50px;
+
+  .flexHeader {
+    .calendar {
+      display: none;
+    }
+
+  }
+  
+  .logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 600;
+
+      span {
+        color: $primary-color;
+      }
+    }
+  
+    .search {
+      flex: 2;
+      display: flex;
+      align-items: center;
+  
+      :global(.ant-input-search) {
+        width: 100%;
+        :global(.ant-input) {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          }
+
+        :global(.ant-btn) {
+            background-color: $primary-color;
+        }
+      }
+    }
+  
+    .calendar {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+  
+      .iconAction {
+        display: flex;
+        gap: 8px;
+
+        .buttonAction {
+          width: 30px;
+          height: 30px;
+          padding: 0;
+        }
+        
+        .icon {
+            font-size: 20px;
+            
+        }
+      }
+  
+      .time {
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  .mobileMenuBtn {
+    display: none;
+  }
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
+      padding: 8px 8px 0 8px;
+      margin-bottom: 16px;
+      position: fixed;
+      width: 100vw;
+      .calendar {
+        display: none;
+      }
+      .flexHeader {
+        .logo {
+          justify-content: flex-start;
+          font-size: 1.3rem;
+          margin-bottom: 0;
+        }
+        .search {
+          order: 2;
+          margin: 8px 0 0 0;
+          flex: unset;
+          :global(.ant-input-search) {
+            width: 100%;
+          }
+        }
+  
+  
+        .calendar {
+          display: flex;
+          order: 1;
+          justify-content: flex-end;
+          gap: 4px;
+          .iconAction {
+            gap: 4px;
+            .buttonAction {
+              width: 28px;
+              height: 28px;
+            }
+            .icon {
+              font-size: 18px;
+            }
+          }
+          .time {
+            display: none;
+          }
+        }
+      }
+    }
+    .mobileMenuBtn {
+      display: inline-block !important;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  }

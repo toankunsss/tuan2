@@ -1,0 +1,27 @@
+@use '../../styles/_variables' as *;
+
+.taskList {
+  background: $bg-gray;
+  border-radius: $border-radius;
+  padding: 10px 15px 0 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  .title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: $text-dark;
+  }
+  
+  .list_container {
+      overflow-y: auto;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: calc(100vh - 64px - 150px);
+    padding: 10px 5px;
+  }
+
+}

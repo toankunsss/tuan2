@@ -1,0 +1,39 @@
+@use '../../styles/_variables' as *;
+
+.taskDetailModal {
+  :global {
+    .ant-modal-content {
+      border-radius: $border-radius;
+    }
+
+    .ant-modal-header {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 24px;
+      .ant-modal-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $text-dark;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 24px;
+    }
+
+    .ant-form-item-label > label {
+      font-weight: 500;
+      color: $text-dark;
+    }
+
+    .ant-input,
+    .ant-select-selector,
+    .ant-picker {
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.formActions {
+  width: 100%;
+  justify-content: flex-end;
+}

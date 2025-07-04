@@ -1,0 +1,77 @@
+@use '../../styles/_variables' as *;
+
+.taskCard {
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  padding: 12px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+}
+
+.radio {
+  margin-top: 8px;
+}
+
+.content {
+  flex: 1;
+  padding-top: 9px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.moreIcon {
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+}
+
+.description {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+.priority {
+  color: $text-priority;
+  text-transform: capitalize;
+}
+
+.date {
+  color: #888;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  :global(.ant-image), :global(.image) {
+    display: none !important;
+  }
+}

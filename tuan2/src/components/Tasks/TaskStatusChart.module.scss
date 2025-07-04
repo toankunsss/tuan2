@@ -1,0 +1,39 @@
+@use '../../styles/_variables' as *;
+
+.statusCard {
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: $text-dark;
+}
+
+.completed .dot{
+  color: #05A301;
+}
+
+.notStarted .dot{
+  color: #F21E1E;
+}
+
+@media (max-width: 600px) {
+  .statusCard {
+    padding: 8px 0 !important;
+  }
+  :global(.ant-space) {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100%;
+  }
+  :global(.ant-space-item) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

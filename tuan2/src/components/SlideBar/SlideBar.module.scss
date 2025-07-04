@@ -1,0 +1,118 @@
+@use '../../styles/_variables' as *;
+
+.sider {
+  background-color: transparent;
+
+  .siderBar {
+    background-color: white;
+    height: calc(100vh - #{$header-height} - 60px);
+    margin: 16px;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.userProfile {
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: white;
+  
+  .avatar {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    overflow: hidden;  }
+
+}
+
+.menu {
+  padding: 16px 0;
+
+
+  :global {
+    .ant-menu-item {
+      margin: 4px ;
+      border-radius: $border-radius;
+      color: white;
+      a {
+        color: white !important;
+      }
+      &.ant-menu-item-active {
+        color: white;
+        background-color: white;
+      }
+
+      &.ant-menu-item-selected {
+        background-color: white;
+        color:  $primary-color;
+      }
+    }
+  }
+}
+
+.logoutItem {
+  margin-top: 32px !important;
+  color: $text-gray;
+  
+  &:hover {
+    color: $primary-color !important;
+  }
+}
+
+// Responsive for SlideBar
+@media (max-width: 900px) {
+  .sider {
+    width: fit-content !important;
+    min-width: fit-content !important;
+    max-width: fit-content !important;
+    .siderBar {
+      margin: 4px;
+      border-radius: 12px;
+      height: calc(100vh - 24px);
+      padding: 0;
+    }
+  }
+  .userProfile {
+    padding: 12px 0 8px 0;
+    .avatar {
+      width: 48px;
+      height: 48px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 2px;
+    }
+    span {
+      display: none;
+    }
+  }
+  .menu {
+    padding: 4px 0;
+    :global {
+      .ant-menu-item {
+        font-size: 0;
+        min-width: fit-content;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        padding: 0 !important;
+        .anticon {
+          font-size: 22px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sider {
+    display: none;
+  }
+}
