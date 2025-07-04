@@ -1,54 +1,38 @@
-.inviteModal {
-  .ant-modal-content {
-    border-radius: 16px;
-    padding: 32px 24px;
-    @media (max-width: 600px) {
-      padding: 16px 4px;
+@media (max-width: 600px) {
+  .inviteModal {
+    :global(.ant-list-item) {
+      flex-wrap: nowrap !important;
+      align-items: flex-start !important;
+      width: 100% !important;
     }
-  }
-  .ant-modal-body {
-    padding: 0;
-  }
-  .ant-list-item {
-    align-items: center;
-    .ant-list-item-meta {
-      align-items: center;
+    :global(.ant-list-item-meta) {
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      width: auto !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 8px;
     }
-    .ant-list-item-meta-title {
-      font-weight: 500;
+    :global(.ant-list-item-meta-content) {
+      min-width: 0 !important;
+      max-width: 100% !important;
+      width: auto !important;
+      flex: 1 1 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
     }
-    .ant-list-item-meta-description {
-      color: #888;
+    :global(.ant-list-item-meta-title),
+    :global(.ant-list-item-meta-description) {
+      font-size: 13px !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      max-width: 140px !important;
+      min-width: 0 !important;
+      overflow-wrap: break-word !important;
+      display: block !important;
     }
-  }
-  .ant-btn-link {
-    color: #f56a00;
-    font-weight: 500;
-  }
-  .ant-btn-primary {
-    background: #f56a00;
-    border-color: #f56a00;
-    &:hover, &:focus {
-      background: #d94e00;
-      border-color: #d94e00;
-    }
-  }
-  .ant-input[readonly] {
-    background: transparent;
-    border: none;
-    font-weight: 500;
-    color: #333;
   }
 }
-
-.inviteModal {
-    .ant-modal-content {
-      @media (max-width: 600px) {
-        padding: 8px 2px !important;
-      }
-    }
-    .ant-modal {
-      width: 98vw !important;
-      max-width: 98vw !important;
-    }
- }
