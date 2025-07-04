@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import MainLayout from '../layouts/MainLayout'
-import Dashboard from '../pages/Dashboard'
-import MyTasks from '../pages/MyTasks'
-import NotFound from '../pages/NotFound'
-import Setting from '../pages/Setting'
-import VitalTask from '../pages/VitalTask'
-import TaskCategory from '../pages/TaskCategory'
+import MainLayout from './layouts/MainLayout'
+import Dashboard from './pages/Dashboard'
+import MyTasks from './pages/MyTasks'
+import NotFound from './pages/NotFound'
+import Setting from './pages/Setting'
+import VitalTask from './pages/VitalTask'
+import TaskCategory from './pages/TaskCategory'
 
 const App = () => {
   return (
