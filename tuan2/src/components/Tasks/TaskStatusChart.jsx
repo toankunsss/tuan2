@@ -1,20 +1,4 @@
-@media (max-width: 600px) {
-  .statusCard {
-    padding: 8px 0 !important;
-  }
-  :global(.ant-space) {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-    width: 100%;
-  }
-  :global(.ant-space-item) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}import { Progress, Card, Space } from 'antd';
+import { Progress, Card, Space } from 'antd';
 import styles from './TaskStatusChart.module.scss';
 import { GoDotFill } from "react-icons/go";
 
