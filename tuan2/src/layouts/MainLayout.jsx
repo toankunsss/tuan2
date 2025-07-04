@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Topbar from '../components/Header/Topbar';
-import SlideBarMenu from '../components/SlideBar/SlideBarMenu';
+import SlideBarMenu from '../components/SlideBar/SlidebarMenu';
 import { Layout, ConfigProvider } from 'antd';
-import { calc } from 'antd/es/theme/internal';
 
 const { Header, Content, Sider } = Layout;
 
